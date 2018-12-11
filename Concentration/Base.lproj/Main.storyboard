@@ -13,7 +13,7 @@
         <!--MAIN-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="MAIN" id="BYZ-38-t0r" customClass="ViewController" customModule="Concentration" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MAIN" modalTransitionStyle="partialCurl" id="BYZ-38-t0r" customClass="ViewController" customModule="Concentration" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,7 @@
                                 <rect key="frame" x="317" y="628" width="390" height="110"/>
                                 <state key="normal" image="PLAY"/>
                                 <connections>
-                                    <segue destination="RY7-sy-ZYG" kind="show" id="cI2-Po-tbq"/>
+                                    <segue destination="RY7-sy-ZYG" kind="modal" id="cI2-Po-tbq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -54,7 +54,7 @@
         <!--DIFFICULTY-->
         <scene sceneID="Uot-wX-BPp">
             <objects>
-                <viewController title="DIFFICULTY" id="RY7-sy-ZYG" sceneMemberID="viewController">
+                <viewController title="DIFFICULTY" modalTransitionStyle="flipHorizontal" id="RY7-sy-ZYG" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ej6-gQ-v7Q">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,7 +118,7 @@
         <!--HARD-->
         <scene sceneID="bK0-qv-gCb">
             <objects>
-                <viewController title="HARD" id="IJH-7h-aks" sceneMemberID="viewController">
+                <viewController title="HARD" modalTransitionStyle="flipHorizontal" id="IJH-7h-aks" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hOx-wW-VYJ">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -133,7 +133,7 @@
         <!--MEDIUM-->
         <scene sceneID="g76-lZ-Mde">
             <objects>
-                <viewController title="MEDIUM" id="teM-Cy-Dqr" sceneMemberID="viewController">
+                <viewController title="MEDIUM" modalTransitionStyle="flipHorizontal" id="teM-Cy-Dqr" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uI7-3V-dOY">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,7 +148,7 @@
         <!--EASY-->
         <scene sceneID="XPQ-l8-vyg">
             <objects>
-                <viewController title="EASY" id="ZHs-ML-yeE" sceneMemberID="viewController">
+                <viewController title="EASY" modalTransitionStyle="flipHorizontal" id="ZHs-ML-yeE" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SMN-4n-7qr">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
