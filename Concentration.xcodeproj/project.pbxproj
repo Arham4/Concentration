@@ -12,7 +12,20 @@
 		AF4BF2F721BAC29F00EB501F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF4BF2F521BAC29F00EB501F /* Main.storyboard */; };
 		AF4BF2F921BAC2A000EB501F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF4BF2F821BAC2A000EB501F /* Assets.xcassets */; };
 		AF4BF2FC21BAC2A000EB501F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF4BF2FA21BAC2A000EB501F /* LaunchScreen.storyboard */; };
+		AF4BF30421BACE4D00EB501F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4BF30321BACE4D00EB501F /* Card.swift */; };
+		AF4BF30621BACE6600EB501F /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4BF30521BACE6600EB501F /* Animal.swift */; };
+		AF4BF31821BACFEF00EB501F /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4BF30821BACF5800EB501F /* CardTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF4BF31321BACFDF00EB501F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF4BF2E621BAC29F00EB501F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF4BF2ED21BAC29F00EB501F;
+			remoteInfo = Concentration;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AF4BF2EE21BAC29F00EB501F /* Concentration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concentration.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +35,22 @@
 		AF4BF2F821BAC2A000EB501F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF4BF2FB21BAC2A000EB501F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF4BF2FD21BAC2A000EB501F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF4BF30321BACE4D00EB501F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		AF4BF30521BACE6600EB501F /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		AF4BF30821BACF5800EB501F /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
+		AF4BF30E21BACFDF00EB501F /* ConcentrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcentrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF4BF31221BACFDF00EB501F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AF4BF2EB21BAC29F00EB501F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF4BF30B21BACFDF00EB501F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				AF4BF2F021BAC29F00EB501F /* Concentration */,
+				AF4BF30F21BACFDF00EB501F /* ConcentrationTests */,
 				AF4BF2EF21BAC29F00EB501F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				AF4BF2EE21BAC29F00EB501F /* Concentration.app */,
+				AF4BF30E21BACFDF00EB501F /* ConcentrationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,8 +87,19 @@
 				AF4BF2F821BAC2A000EB501F /* Assets.xcassets */,
 				AF4BF2FA21BAC2A000EB501F /* LaunchScreen.storyboard */,
 				AF4BF2FD21BAC2A000EB501F /* Info.plist */,
+				AF4BF30321BACE4D00EB501F /* Card.swift */,
+				AF4BF30521BACE6600EB501F /* Animal.swift */,
 			);
 			path = Concentration;
+			sourceTree = "<group>";
+		};
+		AF4BF30F21BACFDF00EB501F /* ConcentrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF4BF30821BACF5800EB501F /* CardTests.swift */,
+				AF4BF31221BACFDF00EB501F /* Info.plist */,
+			);
+			path = ConcentrationTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +122,24 @@
 			productReference = AF4BF2EE21BAC29F00EB501F /* Concentration.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AF4BF30D21BACFDF00EB501F /* ConcentrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF4BF31521BACFDF00EB501F /* Build configuration list for PBXNativeTarget "ConcentrationTests" */;
+			buildPhases = (
+				AF4BF30A21BACFDF00EB501F /* Sources */,
+				AF4BF30B21BACFDF00EB501F /* Frameworks */,
+				AF4BF30C21BACFDF00EB501F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF4BF31421BACFDF00EB501F /* PBXTargetDependency */,
+			);
+			name = ConcentrationTests;
+			productName = ConcentrationTests;
+			productReference = AF4BF30E21BACFDF00EB501F /* ConcentrationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -96,6 +152,10 @@
 				TargetAttributes = {
 					AF4BF2ED21BAC29F00EB501F = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					AF4BF30D21BACFDF00EB501F = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = AF4BF2ED21BAC29F00EB501F;
 					};
 				};
 			};
@@ -113,6 +173,7 @@
 			projectRoot = "";
 			targets = (
 				AF4BF2ED21BAC29F00EB501F /* Concentration */,
+				AF4BF30D21BACFDF00EB501F /* ConcentrationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +189,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AF4BF30C21BACFDF00EB501F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -136,11 +204,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF4BF2F421BAC29F00EB501F /* ViewController.swift in Sources */,
+				AF4BF30621BACE6600EB501F /* Animal.swift in Sources */,
+				AF4BF30421BACE4D00EB501F /* Card.swift in Sources */,
 				AF4BF2F221BAC29F00EB501F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AF4BF30A21BACFDF00EB501F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF4BF31821BACFEF00EB501F /* CardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF4BF31421BACFDF00EB501F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF4BF2ED21BAC29F00EB501F /* Concentration */;
+			targetProxy = AF4BF31321BACFDF00EB501F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AF4BF2F521BAC29F00EB501F /* Main.storyboard */ = {
@@ -314,6 +400,44 @@
 			};
 			name = Release;
 		};
+		AF4BF31621BACFDF00EB501F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ConcentrationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.arham4.ConcentrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Concentration.app/Concentration";
+			};
+			name = Debug;
+		};
+		AF4BF31721BACFDF00EB501F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ConcentrationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.arham4.ConcentrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Concentration.app/Concentration";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -331,6 +455,15 @@
 			buildConfigurations = (
 				AF4BF30121BAC2A000EB501F /* Debug */,
 				AF4BF30221BAC2A000EB501F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF4BF31521BACFDF00EB501F /* Build configuration list for PBXNativeTarget "ConcentrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF4BF31621BACFDF00EB501F /* Debug */,
+				AF4BF31721BACFDF00EB501F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
