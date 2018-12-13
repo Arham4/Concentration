@@ -15,6 +15,8 @@
 		AF4BF30421BACE4D00EB501F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4BF30321BACE4D00EB501F /* Card.swift */; };
 		AF4BF30621BACE6600EB501F /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4BF30521BACE6600EB501F /* Animal.swift */; };
 		AF4BF31821BACFEF00EB501F /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4BF30821BACF5800EB501F /* CardTests.swift */; };
+		AFEB27AF21C00B9A000E0E20 /* Board.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEB27AE21C00B9A000E0E20 /* Board.storyboard */; };
+		AFEB27B121C00D55000E0E20 /* BoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB27B021C00D55000E0E20 /* BoardController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		AF4BF30821BACF5800EB501F /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
 		AF4BF30E21BACFDF00EB501F /* ConcentrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcentrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF4BF31221BACFDF00EB501F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFEB27AE21C00B9A000E0E20 /* Board.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Board.storyboard; sourceTree = "<group>"; };
+		AFEB27B021C00D55000E0E20 /* BoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				AF4BF2F521BAC29F00EB501F /* Main.storyboard */,
 				AF4BF2F821BAC2A000EB501F /* Assets.xcassets */,
 				AF4BF2FA21BAC2A000EB501F /* LaunchScreen.storyboard */,
+				AFEB27AE21C00B9A000E0E20 /* Board.storyboard */,
+				AFEB27B021C00D55000E0E20 /* BoardController.swift */,
 				AF4BF2FD21BAC2A000EB501F /* Info.plist */,
 				AF4BF30321BACE4D00EB501F /* Card.swift */,
 				AF4BF30521BACE6600EB501F /* Animal.swift */,
@@ -186,6 +192,7 @@
 				AF4BF2FC21BAC2A000EB501F /* LaunchScreen.storyboard in Resources */,
 				AF4BF2F921BAC2A000EB501F /* Assets.xcassets in Resources */,
 				AF4BF2F721BAC29F00EB501F /* Main.storyboard in Resources */,
+				AFEB27AF21C00B9A000E0E20 /* Board.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF4BF2F421BAC29F00EB501F /* ViewController.swift in Sources */,
+				AFEB27B121C00D55000E0E20 /* BoardController.swift in Sources */,
 				AF4BF30621BACE6600EB501F /* Animal.swift in Sources */,
 				AF4BF30421BACE4D00EB501F /* Card.swift in Sources */,
 				AF4BF2F221BAC29F00EB501F /* AppDelegate.swift in Sources */,
