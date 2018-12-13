@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Eu4-ZC-knj">
     <device id="ipad12_9rounded" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,20 +14,9 @@
         <scene sceneID="KBs-WQ-VfL">
             <objects>
                 <viewController id="Eu4-ZC-knj" customClass="BoardController" customModule="Concentration" customModuleProvider="target" sceneMemberID="viewController">
-                    <stackView key="view" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" id="btB-zc-xyj">
+                    <stackView key="view" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" id="btB-zc-xyj">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kq8-ub-2hC">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="455.5"/>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Yzt-KE-CLe">
-                                <rect key="frame" x="0.0" y="455.5" width="1024" height="455"/>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MQ2-MZ-fc5">
-                                <rect key="frame" x="0.0" y="910.5" width="1024" height="455.5"/>
-                            </stackView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2jq-LN-W4B"/>
                     </stackView>
                     <connections>
