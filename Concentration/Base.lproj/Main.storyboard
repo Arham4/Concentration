@@ -72,30 +72,18 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voJ-eY-HJI">
                                 <rect key="frame" x="317" y="544" width="390" height="110"/>
                                 <state key="normal" image="EASY"/>
-                                <connections>
-                                    <segue destination="ZHs-ML-yeE" kind="show" id="rWh-eJ-fxr"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7C-zo-9sK">
                                 <rect key="frame" x="317" y="718" width="390" height="110"/>
                                 <state key="normal" image="MEDIUM"/>
-                                <connections>
-                                    <segue destination="teM-Cy-Dqr" kind="show" id="Qe6-8O-jfu"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1v-7N-cdd">
                                 <rect key="frame" x="317" y="898" width="390" height="110"/>
                                 <state key="normal" image="HARD"/>
-                                <connections>
-                                    <segue destination="IJH-7h-aks" kind="show" id="Nx6-1x-af6"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ZA-Uz-GzI">
                                 <rect key="frame" x="317" y="1068" width="390" height="110"/>
                                 <state key="normal" image="EXTREME"/>
-                                <connections>
-                                    <segue destination="XRV-54-EC8" kind="show" id="fU0-an-xgI"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -123,66 +111,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cZ-TW-SbF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="858.984375" y="133.08931185944363"/>
-        </scene>
-        <!--HARD-->
-        <scene sceneID="bK0-qv-gCb">
-            <objects>
-                <viewController title="HARD" modalTransitionStyle="flipHorizontal" id="IJH-7h-aks" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hOx-wW-VYJ">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="VgH-rx-YH1"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MPv-jQ-eQX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="865" y="828"/>
-        </scene>
-        <!--EXTREME -->
-        <scene sceneID="BQN-Pu-YTV">
-            <objects>
-                <viewController title="EXTREME " id="XRV-54-EC8" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ykK-Ea-Xvv">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="weX-ww-CQM"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qph-YH-gNL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1651" y="825"/>
-        </scene>
-        <!--MEDIUM-->
-        <scene sceneID="g76-lZ-Mde">
-            <objects>
-                <viewController title="MEDIUM" modalTransitionStyle="flipHorizontal" id="teM-Cy-Dqr" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uI7-3V-dOY">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="4uo-Ey-RzV"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZBW-Zl-ajL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1642" y="134"/>
-        </scene>
-        <!--EASY-->
-        <scene sceneID="XPQ-l8-vyg">
-            <objects>
-                <viewController title="EASY" modalTransitionStyle="flipHorizontal" id="ZHs-ML-yeE" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="SMN-4n-7qr">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="EuX-4y-JgA"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NW9-Gl-V2V" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="860" y="-697"/>
         </scene>
     </scenes>
     <resources>
