@@ -13,6 +13,8 @@ import UIKit
 // medium: 4x6
 // hard: 6x6
 class BoardController: UIViewController {
+    var boardLength = 4
+    var boardWidth = 3
     
     @IBOutlet var rowStackView: UIStackView!
     
@@ -22,7 +24,7 @@ class BoardController: UIViewController {
     }
     
     private func constructCards() {
-        for _ in 1...3 {
+        for _ in 1...boardWidth {
             let row = UIStackView()
             rowStackView.addArrangedSubview(row)
             row.axis = NSLayoutConstraint.Axis.horizontal
@@ -32,7 +34,7 @@ class BoardController: UIViewController {
             row.widthAnchor.constraint(equalTo: rowStackView.widthAnchor).isActive = true
             row.trailingAnchor.constraint(equalTo: rowStackView.trailingAnchor).isActive = true
             row.leadingAnchor.constraint(equalTo: rowStackView.leadingAnchor).isActive = true
-            for _ in 1...4 {
+            for _ in 1...boardLength {
                 let view = UIView()
                 row.addArrangedSubview(view)
                 view.translatesAutoresizingMaskIntoConstraints = false
