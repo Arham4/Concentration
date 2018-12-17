@@ -13,16 +13,24 @@ import UIKit
 // medium: 4x6
 // hard: 6x6
 class BoardController: UIViewController {
+    var columns = 4
+    var rows = 3
+    var score = 0
     
     @IBOutlet var rowStackView: UIStackView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         constructCards()
     }
     
+    override func prepare(for: UIStoryboardSegue, sender: Any?) {
+        print("called")
+    }
+    
     private func constructCards() {
-        for _ in 1...3 {
+        for _ in 1...rows {
             let row = UIStackView()
             rowStackView.addArrangedSubview(row)
             row.axis = NSLayoutConstraint.Axis.horizontal
@@ -32,7 +40,7 @@ class BoardController: UIViewController {
             row.widthAnchor.constraint(equalTo: rowStackView.widthAnchor).isActive = true
             row.trailingAnchor.constraint(equalTo: rowStackView.trailingAnchor).isActive = true
             row.leadingAnchor.constraint(equalTo: rowStackView.leadingAnchor).isActive = true
-            for _ in 1...4 {
+            for _ in 1...columns {
                 let view = UIView()
                 row.addArrangedSubview(view)
                 view.translatesAutoresizingMaskIntoConstraints = false
