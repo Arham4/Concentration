@@ -8,4 +8,8 @@
 
 struct Card {
     let animal: Animal
+    
+    static func == (card1: Card, card2: Card) -> Bool {
+        return card1.animal == card2.animal
+    }
 }
