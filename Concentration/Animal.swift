@@ -5,8 +5,8 @@
 //  Created by Siddiqui, Arham J on 12/7/18.
 //  Copyright © 2018 Siddiqui, Arham J. All rights reserved.
 //
-
-enum Animal {
+import Foundation
+enum Animal: UInt32 {
     case giraffe
     case monkey
     case snake
@@ -25,4 +25,10 @@ enum Animal {
     case dinosaur
     case bird
     case turtle
+    
+    static func random() -> Animal {
+        return Animal(rawValue: arc4random_uniform(turtle.rawValue + 1))!
+    }
 }
+
+

@@ -60,7 +60,7 @@ class BoardController: UIViewController {
                 
                 changeViewBackground(view, imageName: "blankCard")
                 
-                let card = Card(animal: Animal.giraffe)
+                let card = Card(animal: Animal.random())
                 let attributeImage = findCardImage(card: card)
                 
                 let imageView = UIImageView()
@@ -123,3 +123,6 @@ class BoardController: UIViewController {
         return UIImage(named:cardAnimal)!
     }
 }
+/*
+
+ */
