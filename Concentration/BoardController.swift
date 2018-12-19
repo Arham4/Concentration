@@ -13,16 +13,25 @@ import UIKit
 // medium: 4x6
 // hard: 6x6
 class BoardController: UIViewController {
+    var columns = 4
+    var rows = 3
+    var score = 0
     
+    var selectedCards: [CardView] = []
     @IBOutlet var rowStackView: UIStackView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         constructCards()
     }
     
+    override func prepare(for: UIStoryboardSegue, sender: Any?) {
+        print("called")
+    }
+    
     private func constructCards() {
-        for _ in 1...3 {
+        for _ in 1...rows {
             let row = UIStackView()
             rowStackView.addArrangedSubview(row)
             row.axis = NSLayoutConstraint.Axis.horizontal
@@ -32,11 +41,14 @@ class BoardController: UIViewController {
             row.widthAnchor.constraint(equalTo: rowStackView.widthAnchor).isActive = true
             row.trailingAnchor.constraint(equalTo: rowStackView.trailingAnchor).isActive = true
             row.leadingAnchor.constraint(equalTo: rowStackView.leadingAnchor).isActive = true
-            for _ in 1...4 {
-                let view = UIView()
+            for _ in 1...columns {
+                let view = CardView()
                 row.addArrangedSubview(view)
                 view.translatesAutoresizingMaskIntoConstraints = false
                 view.heightAnchor.constraint(equalTo: row.heightAnchor).isActive = true
+                
+                let clickGesture = UITapGestureRecognizer(target: self, action:  #selector (self.selectCard(_:)))
+                view.addGestureRecognizer(clickGesture)
                 
                 let cardStackView = UIStackView()
                 view.addSubview(cardStackView)
@@ -52,8 +64,10 @@ class BoardController: UIViewController {
                 
                 changeViewBackground(view, imageName: "blankCard")
                 
-                let card = Card(animal: Animal.giraffe)
+                let card = Card(animal: Animal.random())
                 let attributeImage = findCardImage(card: card)
+                
+                view.card = card
                 
                 let imageView = UIImageView()
                 imageView.contentMode = UIView.ContentMode.scaleAspectFit
@@ -61,10 +75,56 @@ class BoardController: UIViewController {
                 cardStackView.addArrangedSubview(imageView)
                 imageView.image = attributeImage
                 imageView.widthAnchor.constraint(equalTo: cardStackView.widthAnchor, constant: 0).isActive = true
-            
             }
 
         }
+    }
+    
+    @objc private func selectCard(_ sender: UITapGestureRecognizer) {
+        let view = sender.view! as! CardView
+        view.isSelected = !view.isSelected
+        print("we out here bois")
+        if view.isSelected {
+            addCardToSelected(view)
+            checkForMatchIfTwoSelected()
+        } else {
+            removeCardFromSelected(view)
+        }
+    }
+    
+    private func checkForMatchIfTwoSelected() {
+        if selectedCards.count == 2 {
+            let cardViewOne = selectedCards[0]
+            let cardViewTwo = selectedCards[1]
+            let cardOne = cardViewOne.card!
+            let cardTwo = cardViewTwo.card!
+            
+            if cardOne == cardTwo {
+                print("wot got a match")
+                // handle successful match
+            } else {
+                // handle non-successful match
+            }
+            
+            removeCardFromSelected(cardViewOne)
+            removeCardFromSelected(cardViewTwo)
+        }
+    }
+    
+    private func addCardToSelected(_ view: CardView) {
+        selectedCards.append(view)
+    }
+    
+    private func removeCardFromSelected(_ view: CardView) {
+        var index = 0
+        for (i, view2) in selectedCards.enumerated() {
+            if view2.card! == view.card! {
+                index = i
+                break
+            }
+        }
+        view.isSelected = false
+        selectedCards.remove(at: index)
     }
     
     private func changeViewBackground(_ view: UIView, imageName: String) {
@@ -73,6 +133,48 @@ class BoardController: UIViewController {
     }
     
     private func findCardImage(card: Card) -> UIImage {
-        return UIImage(named: "giraffe")!
+        var cardAnimal = "error"
+        switch card.animal {
+        case .giraffe:
+            cardAnimal = "giraffe"
+        case .monkey:
+            cardAnimal = "monkey"
+        case .snake:
+            cardAnimal = "snake"
+        case .lion:
+            cardAnimal = "lion"
+        case .squirrel:
+            cardAnimal = "squirrel"
+        case .zebra:
+            cardAnimal = "zebra"
+        case .dog:
+            cardAnimal = "dog"
+        case .narwhal:
+            cardAnimal = "narwhal"
+        case .cow:
+            cardAnimal = "cow"
+        case .panda:
+            cardAnimal = "panda"
+        case .sheep:
+            cardAnimal = "sheep"
+        case .elephant:
+            cardAnimal = "elephant"
+        case .frog:
+            cardAnimal = "frog"
+        case .chicken:
+            cardAnimal = "chicken"
+        case .bat:
+            cardAnimal = "bat"
+        case .dinosaur:
+            cardAnimal = "dinosaur"
+        case .bird:
+            cardAnimal = "bird"
+        case .turtle:
+            cardAnimal = "turtle"
+        }
+        return UIImage(named:cardAnimal)!
     }
 }
+/*
+
+ */

@@ -15,6 +15,7 @@
 		AF4BF30421BACE4D00EB501F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4BF30321BACE4D00EB501F /* Card.swift */; };
 		AF4BF30621BACE6600EB501F /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4BF30521BACE6600EB501F /* Animal.swift */; };
 		AF4BF31821BACFEF00EB501F /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4BF30821BACF5800EB501F /* CardTests.swift */; };
+		AF766CD721CA9372008BD004 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF766CD621CA9372008BD004 /* CardView.swift */; };
 		AFEB27AF21C00B9A000E0E20 /* Board.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEB27AE21C00B9A000E0E20 /* Board.storyboard */; };
 		AFEB27B121C00D55000E0E20 /* BoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB27B021C00D55000E0E20 /* BoardController.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		AF4BF30821BACF5800EB501F /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
 		AF4BF30E21BACFDF00EB501F /* ConcentrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcentrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF4BF31221BACFDF00EB501F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF766CD621CA9372008BD004 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		AFEB27AE21C00B9A000E0E20 /* Board.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Board.storyboard; sourceTree = "<group>"; };
 		AFEB27B021C00D55000E0E20 /* BoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +97,7 @@
 				AF4BF2FD21BAC2A000EB501F /* Info.plist */,
 				AF4BF30321BACE4D00EB501F /* Card.swift */,
 				AF4BF30521BACE6600EB501F /* Animal.swift */,
+				AF766CD621CA9372008BD004 /* CardView.swift */,
 			);
 			path = Concentration;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				AFEB27B121C00D55000E0E20 /* BoardController.swift in Sources */,
 				AF4BF30621BACE6600EB501F /* Animal.swift in Sources */,
 				AF4BF30421BACE4D00EB501F /* Card.swift in Sources */,
+				AF766CD721CA9372008BD004 /* CardView.swift in Sources */,
 				AF4BF2F221BAC29F00EB501F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
