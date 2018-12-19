@@ -11,4 +11,5 @@ import UIKit
 class CardView: UIView {
     var card: Card? = nil
     var isSelected: Bool = false
+    var imageView: UIImageView? = nil
 }

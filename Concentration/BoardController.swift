@@ -78,7 +78,7 @@ class BoardController: UIViewController {
                 cardStackView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
                 cardStackView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
                 
-                changeViewBackground(view, imageName: "blankCard")
+                changeViewBackground(view, imageName: "backCard")
                 
                 let card = Card(animal: animals[counter])
                 counter += 1
@@ -92,6 +92,8 @@ class BoardController: UIViewController {
                 cardStackView.addArrangedSubview(imageView)
                 imageView.image = attributeImage
                 imageView.widthAnchor.constraint(equalTo: cardStackView.widthAnchor, constant: 0).isActive = true
+                imageView.isHidden = true
+                view.imageView = imageView
             }
 
         }
@@ -99,13 +101,22 @@ class BoardController: UIViewController {
     
     @objc private func selectCard(_ sender: UITapGestureRecognizer) {
         let view = sender.view! as! CardView
-        view.isSelected = !view.isSelected
-        print("we out here bois")
-        if view.isSelected {
+        if !view.isSelected {
+            flipCard(view)
             addCardToSelected(view)
             checkForMatchIfTwoSelected()
+        }
+    }
+    
+    private func flipCard(_ view: CardView) {
+        view.isSelected = !view.isSelected
+        
+        if view.isSelected {
+            changeViewBackground(view, imageName: "blankCard")
+            view.imageView!.isHidden = false
         } else {
-            removeCardFromSelected(view)
+            changeViewBackground(view, imageName: "backCard")
+            view.imageView!.isHidden = true
         }
     }
     
@@ -117,13 +128,14 @@ class BoardController: UIViewController {
             let cardTwo = cardViewTwo.card!
             
             if cardOne == cardTwo {
-                print("wot got a match")
                 // handle successful match
             } else {
-                print("match not find u failure")
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                    self.flipCard(cardViewOne)
+                    self.flipCard(cardViewTwo)
+                })
                 // handle non-successful match
             }
-            
             removeCardFromSelected(cardViewOne)
             removeCardFromSelected(cardViewTwo)
         }
@@ -141,7 +153,6 @@ class BoardController: UIViewController {
                 break
             }
         }
-        view.isSelected = false
         selectedCards.remove(at: index)
     }
     
