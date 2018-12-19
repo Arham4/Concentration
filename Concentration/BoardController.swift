@@ -81,6 +81,45 @@ class BoardController: UIViewController {
     }
     
     private func findCardImage(card: Card) -> UIImage {
-        return UIImage(named: "giraffe")!
+        var cardAnimal = "error"
+        switch card.animal {
+        case .giraffe:
+            cardAnimal = "giraffe"
+        case .monkey:
+            cardAnimal = "monkey"
+        case .snake:
+            cardAnimal = "snake"
+        case .lion:
+            cardAnimal = "lion"
+        case .squirrel:
+            cardAnimal = "squirrel"
+        case .zebra:
+            cardAnimal = "zebra"
+        case .dog:
+            cardAnimal = "dog"
+        case .narwhal:
+            cardAnimal = "narwhal"
+        case .cow:
+            cardAnimal = "cow"
+        case .panda:
+            cardAnimal = "panda"
+        case .sheep:
+            cardAnimal = "sheep"
+        case .elephant:
+            cardAnimal = "elephant"
+        case .frog:
+            cardAnimal = "frog"
+        case .chicken:
+            cardAnimal = "chicken"
+        case .bat:
+            cardAnimal = "bat"
+        case .dinosaur:
+            cardAnimal = "dinosaur"
+        case .bird:
+            cardAnimal = "bird"
+        case .turtle:
+            cardAnimal = "turtle"
+        }
+        return UIImage(named:cardAnimal)!
     }
 }
