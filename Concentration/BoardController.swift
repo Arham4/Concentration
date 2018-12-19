@@ -26,11 +26,27 @@ class BoardController: UIViewController {
         constructCards()
     }
     
+    private func generateRandomAnimals() -> [Animal] {
+        var animals: [Animal] = []
+        for _ in 1...((rows * columns) / 2) {
+            var animal = Animal.random()
+            while animals.contains(animal) {
+                animal = Animal.random()
+            }
+            animals.append(animal)
+            animals.append(animal)
+        }
+        animals.shuffle()
+        return animals
+    }
+    
     override func prepare(for: UIStoryboardSegue, sender: Any?) {
         print("called")
     }
     
     private func constructCards() {
+        let animals = generateRandomAnimals()
+        var counter = 0
         for _ in 1...rows {
             let row = UIStackView()
             rowStackView.addArrangedSubview(row)
@@ -64,7 +80,8 @@ class BoardController: UIViewController {
                 
                 changeViewBackground(view, imageName: "blankCard")
                 
-                let card = Card(animal: Animal.random())
+                let card = Card(animal: animals[counter])
+                counter += 1
                 let attributeImage = findCardImage(card: card)
                 
                 view.card = card
@@ -103,6 +120,7 @@ class BoardController: UIViewController {
                 print("wot got a match")
                 // handle successful match
             } else {
+                print("match not find u failure")
                 // handle non-successful match
             }
             
