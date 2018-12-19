@@ -17,6 +17,7 @@ class BoardController: UIViewController {
     var rows = 3
     var score = 0
     
+    var selectedCards: [CardView] = []
     @IBOutlet var rowStackView: UIStackView!
 
     
@@ -41,10 +42,13 @@ class BoardController: UIViewController {
             row.trailingAnchor.constraint(equalTo: rowStackView.trailingAnchor).isActive = true
             row.leadingAnchor.constraint(equalTo: rowStackView.leadingAnchor).isActive = true
             for _ in 1...columns {
-                let view = UIView()
+                let view = CardView()
                 row.addArrangedSubview(view)
                 view.translatesAutoresizingMaskIntoConstraints = false
                 view.heightAnchor.constraint(equalTo: row.heightAnchor).isActive = true
+                
+                let clickGesture = UITapGestureRecognizer(target: self, action:  #selector (self.selectCard(_:)))
+                view.addGestureRecognizer(clickGesture)
                 
                 let cardStackView = UIStackView()
                 view.addSubview(cardStackView)
@@ -63,16 +67,64 @@ class BoardController: UIViewController {
                 let card = Card(animal: Animal.giraffe)
                 let attributeImage = findCardImage(card: card)
                 
+                view.card = card
+                
                 let imageView = UIImageView()
                 imageView.contentMode = UIView.ContentMode.scaleAspectFit
                 imageView.translatesAutoresizingMaskIntoConstraints = false
                 cardStackView.addArrangedSubview(imageView)
                 imageView.image = attributeImage
                 imageView.widthAnchor.constraint(equalTo: cardStackView.widthAnchor, constant: 0).isActive = true
-            
             }
 
         }
+    }
+    
+    @objc private func selectCard(_ sender: UITapGestureRecognizer) {
+        let view = sender.view! as! CardView
+        view.isSelected = !view.isSelected
+        print("we out here bois")
+        if view.isSelected {
+            addCardToSelected(view)
+            checkForMatchIfTwoSelected()
+        } else {
+            removeCardFromSelected(view)
+        }
+    }
+    
+    private func checkForMatchIfTwoSelected() {
+        if selectedCards.count == 2 {
+            let cardViewOne = selectedCards[0]
+            let cardViewTwo = selectedCards[1]
+            let cardOne = cardViewOne.card!
+            let cardTwo = cardViewTwo.card!
+            
+            if cardOne == cardTwo {
+                print("wot got a match")
+                // handle successful match
+            } else {
+                // handle non-successful match
+            }
+            
+            removeCardFromSelected(cardViewOne)
+            removeCardFromSelected(cardViewTwo)
+        }
+    }
+    
+    private func addCardToSelected(_ view: CardView) {
+        selectedCards.append(view)
+    }
+    
+    private func removeCardFromSelected(_ view: CardView) {
+        var index = 0
+        for (i, view2) in selectedCards.enumerated() {
+            if view2.card! == view.card! {
+                index = i
+                break
+            }
+        }
+        view.isSelected = false
+        selectedCards.remove(at: index)
     }
     
     private func changeViewBackground(_ view: UIView, imageName: String) {
