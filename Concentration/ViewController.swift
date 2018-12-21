@@ -16,32 +16,29 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        do{
+        do {
             audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "Sample", ofType: "mp3")!))
             audioPlayer.prepareToPlay()
-        }
-        catch{
-            
-        }
+        } catch {}
     }
+    
     @IBAction func Play(_ sender: UIButton) {
-        
         audioPlayer.play()
         
     }
     
     @IBAction func musicon(_ sender: UIButton) {
-        
         audioPlayer.play()
     }
+    
     @IBAction func musicoff(_ sender: UIButton) {
         if audioPlayer.isPlaying {
-        audioPlayer.pause()
-    }
-        else{
-            
+            audioPlayer.pause()
+        } else {
+            audioPlayer.play()
         }
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is BoardController {
             let destination = segue.destination as! BoardController
