@@ -7,14 +7,41 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    
+    var audioPlayer = AVAudioPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        do{
+            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "Sample", ofType: "mp3")!))
+            audioPlayer.prepareToPlay()
+        }
+        catch{
+            
+        }
+    }
+    @IBAction func Play(_ sender: UIButton) {
+        
+        audioPlayer.play()
+        
     }
     
+    @IBAction func musicon(_ sender: UIButton) {
+        
+        audioPlayer.play()
+    }
+    @IBAction func musicoff(_ sender: UIButton) {
+        if audioPlayer.isPlaying {
+        audioPlayer.pause()
+    }
+        else{
+            
+        }
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is BoardController {
             let destination = segue.destination as! BoardController
@@ -31,4 +58,5 @@ class ViewController: UIViewController {
         }
     }
 }
+
 

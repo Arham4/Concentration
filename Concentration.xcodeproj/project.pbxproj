@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39C91ED921CA95E7003D0391 /* Sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 39C91ED821CA95E7003D0391 /* Sample.mp3 */; };
 		AF4BF2F221BAC29F00EB501F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4BF2F121BAC29F00EB501F /* AppDelegate.swift */; };
 		AF4BF2F421BAC29F00EB501F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4BF2F321BAC29F00EB501F /* ViewController.swift */; };
 		AF4BF2F721BAC29F00EB501F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF4BF2F521BAC29F00EB501F /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39C91ED821CA95E7003D0391 /* Sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sample.mp3; sourceTree = "<group>"; };
 		AF4BF2EE21BAC29F00EB501F /* Concentration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concentration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF4BF2F121BAC29F00EB501F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF4BF2F321BAC29F00EB501F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39C91ED721CA95B8003D0391 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				39C91ED821CA95E7003D0391 /* Sample.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
 		AF4BF2E521BAC29F00EB501F = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +103,7 @@
 				AFEB27AE21C00B9A000E0E20 /* Board.storyboard */,
 				AFEB27B021C00D55000E0E20 /* BoardController.swift */,
 				AF4BF2FD21BAC2A000EB501F /* Info.plist */,
+				39C91ED721CA95B8003D0391 /* Music */,
 				AF4BF30321BACE4D00EB501F /* Card.swift */,
 				AF4BF30521BACE6600EB501F /* Animal.swift */,
 			);
@@ -189,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39C91ED921CA95E7003D0391 /* Sample.mp3 in Resources */,
 				AF4BF2FC21BAC2A000EB501F /* LaunchScreen.storyboard in Resources */,
 				AF4BF2F921BAC2A000EB501F /* Assets.xcassets in Resources */,
 				AF4BF2F721BAC29F00EB501F /* Main.storyboard in Resources */,

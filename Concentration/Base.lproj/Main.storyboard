@@ -17,13 +17,48 @@
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="qkW-s3-UIB">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OPTION BOARD" translatesAutoresizingMaskIntoConstraints="NO" id="cQ1-k4-fUl">
+                                <rect key="frame" x="-42" y="0.0" width="1108" height="1645"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ya3-Kr-MER">
+                                <rect key="frame" x="53" y="966" width="390" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="MUSIC ON">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="musicon:" destination="J60-Ph-Gap" eventType="touchUpInside" id="eOB-In-ykS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VD-vH-maB">
+                                <rect key="frame" x="543" y="966" width="390" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="MUSIC OFF">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="musicoff:" destination="J60-Ph-Gap" eventType="touchUpInside" id="R8F-2a-Nng"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYD-9Y-q4f">
+                                <rect key="frame" x="53" y="39" width="91" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="HOME"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="CKR-C4-lBh"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6C9-nz-3A2"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hDS-Cf-FFr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="J60-Ph-Gap" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-625" y="117"/>
+            <point key="canvasLocation" x="-625.1953125" y="116.83748169838945"/>
         </scene>
         <!--MAIN-->
         <scene sceneID="tne-QT-ifu">
@@ -33,6 +68,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="dje-zE-HvF">
+                                <rect key="frame" x="0.0" y="-94" width="1024" height="1460"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALN-l0-Woc">
                                 <rect key="frame" x="317" y="807" width="390" height="110"/>
                                 <state key="normal" image="OPTIONS"/>
@@ -40,16 +78,14 @@
                                     <segue destination="EqW-9o-YQo" kind="show" id="sP6-CK-9bB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dV-4W-dv6">
+                            <button opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dV-4W-dv6">
                                 <rect key="frame" x="317" y="628" width="390" height="110"/>
                                 <state key="normal" image="PLAY"/>
                                 <connections>
+                                    <action selector="Play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tXS-wb-CSg"/>
                                     <segue destination="RY7-sy-ZYG" kind="modal" id="cI2-Po-tbq"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="dje-zE-HvF">
-                                <rect key="frame" x="0.0" y="-94" width="1024" height="1460"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -158,10 +194,14 @@
         <image name="HOME" width="512" height="512"/>
         <image name="Image" width="750" height="1334"/>
         <image name="MEDIUM" width="390" height="110"/>
+        <image name="MUSIC OFF" width="390" height="110"/>
+        <image name="MUSIC ON" width="390" height="110"/>
+        <image name="OPTION BOARD" width="750" height="1334"/>
         <image name="OPTIONS" width="390" height="110"/>
         <image name="PLAY" width="390" height="110"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UJd-ap-igi"/>
+        <segue reference="CKR-C4-lBh"/>
     </inferredMetricsTieBreakers>
 </document>
